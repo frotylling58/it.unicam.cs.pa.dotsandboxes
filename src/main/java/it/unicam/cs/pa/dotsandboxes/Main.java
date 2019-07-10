@@ -31,10 +31,6 @@ public class Main {
 		controller.nextTurn();
 		System.out.println("--------");
 		System.out.println(grid);
-							
-		
-		
-
 
 	}
 	
