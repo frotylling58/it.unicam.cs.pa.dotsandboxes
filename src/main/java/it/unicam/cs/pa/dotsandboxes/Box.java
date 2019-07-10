@@ -83,7 +83,7 @@ public class Box {
 	}
 	
 	// @Override  
-	//TODO mettere un hashcode che confronta gli equals
+	//TODO mettere un hashcode che confronta gli equals 
 	
 	
 	
