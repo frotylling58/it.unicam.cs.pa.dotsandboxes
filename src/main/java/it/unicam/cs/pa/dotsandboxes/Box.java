@@ -86,7 +86,7 @@ public class Box {
 	//TODO mettere un hashcode che confronta gli equals
 	
 	
-	
+	//prova
 	
 	@Override
 	public String toString() {
