@@ -2,6 +2,8 @@ package it.unicam.cs.pa.dotsandboxes;
 
 import java.util.Vector;
 
+
+//prova
 public class Bot implements Player {
 	private int nomeGiocatore;
 	private int bot = nomeGiocatore;
