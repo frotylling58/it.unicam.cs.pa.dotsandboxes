@@ -72,6 +72,12 @@ public class Box {
 				&& box.getLineRight().equals(lineRight) && box.getLineLeft().equals(lineLeft);
 	}
 	
+	//TODO @Override
+	
+	//TODO mettere un hashcode che confornti gli equals
+	
+	
+	
 	@Override
 	public String toString() {
 		return String.format("[%s,%s]","[%s,%s]","[%s,%s]","[%s,%s]",lineTop.toString(), lineBottom.toString(), lineLeft.toString(), lineRight.toString() );
