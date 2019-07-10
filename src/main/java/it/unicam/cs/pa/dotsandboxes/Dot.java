@@ -10,7 +10,7 @@ public class Dot {
 	private final int y;
 	
 	public Dot(int x , int y) throws IllegalArgumentException {
-		if(x>=0 || y>=0) throw new IllegalArgumentException("Tutte e due le coordinate devono essere positive");
+		if(x<0 || y<0) throw new IllegalArgumentException("Tutte e due le coordinate devono essere positive");
 		this.x = x;
 		this.y = y;
 	}
@@ -32,7 +32,7 @@ public class Dot {
 		return String.format("(%d,%d)",x,y);
 		
 	}
-	// Controlla se l'elemento è un istanza di Dot
+	// Controlla se l'elemento Ã¨ un istanza di Dot
 	@Override
 	public boolean equals(Object obj) {
 		if(!(obj instanceof Dot)) {
@@ -44,6 +44,6 @@ public class Dot {
 	}
 	public static double distance(Dot d1, Dot d2)
 	{
-		return Math.sqrt(Math.exp(d1.getX()-d2.getX())+ Math.exp(d1.getY()-d2.getY()));
+		return Math.sqrt(Math.pow(d1.getX()-d2.getX(),2)+ Math.pow(d1.getY()-d2.getY(),2));
 	}
 }

@@ -5,7 +5,7 @@ public class Winner {
 	
 	
 	
-	//TODO assegnare il punteggio al giocatore,e quindi determinare il vincitore stampandolo a console
+	//assegnare il punteggio al giocatore,e quindi determinare il vincitore stampandolo a console
 	
 
 }

@@ -37,7 +37,7 @@ public class Line {
 
 	}
 
-	// Controlla se l'elemento Ã¨ un istanza di Line
+	// Controlla se l'elemento è un istanza di Line
 	@Override
 	public boolean equals(Object obj) {
 		if (!(obj instanceof Line)) {

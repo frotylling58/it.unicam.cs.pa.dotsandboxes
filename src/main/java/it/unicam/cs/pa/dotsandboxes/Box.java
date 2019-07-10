@@ -56,17 +56,7 @@ public class Box {
 		return lineRight;
 	}
 	
-	
-	/*
-	public void lineHorizontal() {
-		
-		
-	}
-	
-	public void lineVertical() {
-		
-	}
-	*/
+
 	
 /// Metodo per controllare se due box sono uguali
 	@Override
@@ -81,10 +71,6 @@ public class Box {
 		return box.getLineTop().equals(lineTop) && box.getLineBottom().equals(lineBottom) 
 				&& box.getLineRight().equals(lineRight) && box.getLineLeft().equals(lineLeft);
 	}
-	
-	// @Override  
-	//TODO mettere un hashcode che confronta gli equals
-	
 	
 	@Override
 	public String toString() {
