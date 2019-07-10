@@ -84,7 +84,7 @@ public class Box {
 	
 	// @Override  
 	//TODO mettere un hashcode che confronta gli equals
-	//prova2
+	
 	
 	@Override
 	public String toString() {
