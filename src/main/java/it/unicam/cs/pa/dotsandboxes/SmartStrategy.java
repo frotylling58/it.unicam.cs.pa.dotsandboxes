@@ -1,9 +1,9 @@
 package it.unicam.cs.pa.dotsandboxes;
 
-public class SmartStrategy implements Strategy {
+public class SmartStrategy extends Bot  {
 
 	@Override
-	public Line suggestLine(Grid grid) {
+	public Line drawLine() {
 		// TODO Auto-generated method stub
 		return null;
 	}

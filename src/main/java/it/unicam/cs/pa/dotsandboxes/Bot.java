@@ -1,16 +1,23 @@
 package it.unicam.cs.pa.dotsandboxes;
 
-public class Bot extends AbstractPlayer {
-	private Strategy strategy = null;
+abstract class Bot  implements Player {
+	//private Strategy strategy = null;
 	
-	public Bot(Grid grid, Strategy strategy) {
-		super(grid);
-		this.strategy = strategy; 
+	protected Grid grid;
+	
+	public Bot() {
+		//super(grid);
+		
 	}
 
+	public void setGrid(Grid grid)
+	{
+		this.grid = grid;
+	}
+	
 	@Override
 	public Line drawLine() {
-		return strategy.suggestLine(grid);
+		return null;
 	}
 
 }

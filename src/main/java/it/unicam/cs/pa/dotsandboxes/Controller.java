@@ -10,20 +10,16 @@ public class Controller {
  * Capire quando un box viene creato TODO
  * Gestire la visualizzazione su console TODO
  */
-	private Grid grid;
+	private IGrid grid;
 	private PlayerWithPoints player1, player2;
 	private Player currentTurn;
 	
-	public Controller(Player player1, Player player2, Grid grid) {
-		this.grid = grid;
+	public Controller(Player player1, Player player2, GridFactory grid, int size) {
+		this.grid = grid.createNewInstance(size);
 		this.player1 = new PlayerWithPoints(player1);
 		this.player2 = new PlayerWithPoints(player2);
 		this.currentTurn = player1;
 		
-	}
-
-	public Grid getGrid() {
-		return grid;
 	}
 
 	public PlayerWithPoints getPlayer1() {
@@ -35,14 +31,7 @@ public class Controller {
 	}
 	
 	public boolean finished() {
-		for(int row = 0; row<grid.getSize(); row++) {
-			for(int col = 0; col<grid.getSize(); col++) {
-				if(grid.getGrid()[row][col] == null)
-					return false;
-			}
-			
-		}
-		return true;
+		return grid.isFinished();
 	}
 	
 	public Player getWinner() {

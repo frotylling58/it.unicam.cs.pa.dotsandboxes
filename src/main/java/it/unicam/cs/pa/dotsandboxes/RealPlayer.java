@@ -6,8 +6,8 @@ import java.util.regex.*;
 public class RealPlayer extends AbstractPlayer {
 
 	private Scanner s = new Scanner(System.in);
-	public RealPlayer(Grid grid) {
-		super(grid);
+	public RealPlayer() {
+		//super(grid);
 	}
 
 	@Override

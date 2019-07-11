@@ -1,11 +1,16 @@
 package it.unicam.cs.pa.dotsandboxes;
 import java.util.Random;
 
-public class DumbStrategy implements Strategy {
+public class DumbStrategy extends Bot {
+	public DumbStrategy() {
+		
+		// TODO Auto-generated constructor stub
+	}
 
+	private Random r = new Random();
+	
 	@Override
-	public Line suggestLine(Grid grid) {
-		Random r = new Random();
+	public Line drawLine() {
 		int x = r.nextInt(grid.getSize());
 		int y = r.nextInt(grid.getSize());
 		Dot dot1 = new Dot(x,y);
@@ -19,6 +24,8 @@ public class DumbStrategy implements Strategy {
 	}
 	
 	private Dot[] getAdjacence(int x, int y, int size) {
+		
+
 		// controllo angoli
 		if(x == 0 && y == 0) return new Dot[] {new Dot(1,0), new Dot(0,1)};
 		if(x == 0 && y == size) return new Dot[] {new Dot(0,size-1), new Dot(1,size)};
@@ -32,5 +39,7 @@ public class DumbStrategy implements Strategy {
 		// altrimenti il punto è all'interno della griglia (no lati, no angoli)
 		return new Dot[] {new Dot(x,y-1), new Dot(x,y+1), new Dot(x+1,y), new Dot(x-1,y)};
 	}
+
+
 	
 }
