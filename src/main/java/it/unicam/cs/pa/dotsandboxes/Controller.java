@@ -12,13 +12,20 @@ public class Controller {
  */
 	private Grid grid;
 	private PlayerWithPoints player1, player2;
-	private Player currentTurn;
+	private PlayerWithPoints currentTurn;
 	
 	public Controller(Player player1, Player player2, Grid grid) {
 		this.grid = grid;
 		this.player1 = new PlayerWithPoints(player1);
 		this.player2 = new PlayerWithPoints(player2);
-		this.currentTurn = player1;
+		this.currentTurn = this.player1;
+		this.grid.addBoxCreatedListener(new BoxCreatedListener() {
+			
+			@Override
+			public void onBoxCreated() {
+			   currentTurn.addPoint();
+			}
+		} );
 		
 	}
 
@@ -56,16 +63,16 @@ public class Controller {
 		do {
 		try {
 			redo = false;
-			Line line = currentTurn.drawLine();
+			Line line = currentTurn.getPlayer().drawLine();
 			grid.insertLine(line);
 		} catch (IllegalArgumentException e) {
 			redo = true;
 			System.out.println("Incorrect position, insert again");
 		}
 		} while(redo);
-		if(currentTurn == player1.getPlayer())
-			currentTurn = player2.getPlayer();
+		if(currentTurn == player1)
+			currentTurn = player2;
 		else
-			currentTurn = player1.getPlayer();
+			currentTurn = player1;
 	}
 }

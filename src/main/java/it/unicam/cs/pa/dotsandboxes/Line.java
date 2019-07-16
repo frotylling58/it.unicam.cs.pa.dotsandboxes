@@ -30,7 +30,11 @@ public class Line {
 			return new Line(dot2,dot1);
 		return this;
 	}
-
+	
+	public boolean isVertical() {
+		Line line = this.getNormalForm();
+		return line.getDot1().getY()<line.getDot2().getY();
+	}
 	@Override
 	public String toString() {
 		return String.format("[%s,%s]", dot1.toString(), dot2.toString());
