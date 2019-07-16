@@ -20,10 +20,10 @@ public class Main {
 		Controller controller = new Controller(p1, bot, grid);
 		System.out.print(grid);
 		controller.nextTurn();
-		System.out.println("------");
+		System.out.println("--------");
 		System.out.println(grid);
 		controller.nextTurn();
-		System.out.println("-----");
+		System.out.println("--------");
 		System.out.println(grid);
 		controller.nextTurn();
 		System.out.println("--------");
