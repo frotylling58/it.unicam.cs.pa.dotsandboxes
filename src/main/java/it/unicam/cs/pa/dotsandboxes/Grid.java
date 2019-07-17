@@ -53,7 +53,7 @@ public class Grid {
 			return grid;
 		}
 		
-		public List getBoxes() {
+		public List<?> getBoxes() {
 			return this.boxes;
 		}
 		public int getSize() {
