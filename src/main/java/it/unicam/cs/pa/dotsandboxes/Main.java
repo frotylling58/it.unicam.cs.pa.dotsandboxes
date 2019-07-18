@@ -27,7 +27,7 @@ public class Main {
 		} while (controller.finished() == false);
 			
 		controller.getWinner();
-		System.out.println("Bye bye");
+		System.out.println("Bye bye by Mattia and Donoval");
 	}
 	
 }
