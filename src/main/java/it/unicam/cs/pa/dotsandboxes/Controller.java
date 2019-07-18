@@ -1,15 +1,7 @@
 package it.unicam.cs.pa.dotsandboxes;
 
 public class Controller {
-/*
- * Metodi per il controller (arbitro)
- * 
- * 2. Gestire i turni OK
- * 3. Controllare se la mossa è valida OK
- * 4. Aggiornare eventualmente il punteggio TODO
- * Capire quando un box viene creato TODO
- * Gestire la visualizzazione su console TODO
- */
+	
 	private Grid grid;
 	private PlayerWithPoints player1, player2;
 	private PlayerWithPoints currentTurn;
@@ -52,10 +44,14 @@ public class Controller {
 		return true;
 	}
 	
-	public Player getWinner() {
-		if(!finished())
-			return null;
-		return null;
+	public void getWinner() {
+		if(finished() == true) {
+			if(player1.getPoints() > player2.getPoints())
+				System.out.println("Player 1 won the game");
+			else
+				System.out.println("Player 2 won the game");
+		}
+			
 	}
 	
 	public void nextTurn() {
