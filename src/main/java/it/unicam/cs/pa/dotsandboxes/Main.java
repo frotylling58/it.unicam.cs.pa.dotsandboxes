@@ -43,8 +43,10 @@ public class Main {
 		
 		Scanner input = new Scanner(System.in);
 		
-		if (!input.hasNextInt())  return scan();
-		
+		if (!input.hasNextInt()) {
+			System.out.println("I want an integer type !");
+			return scan();
+		}
 		int i = input.nextInt();
 		
 		//input.close();
