@@ -7,7 +7,7 @@ import org.junit.Test;
 public class testProva {
 
 	
-	@Test
+	@Test()
 	public void prova()
 	{
 		
