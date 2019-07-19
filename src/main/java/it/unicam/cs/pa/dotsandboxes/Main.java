@@ -1,7 +1,11 @@
+
+
 /**
  * 
  */
 package it.unicam.cs.pa.dotsandboxes;
+
+import java.util.Scanner;
 
 /**
  * @author Utente
@@ -13,17 +17,21 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		Grid grid = new Grid(4);
-		Strategy dumb = new DumbStrategy();
-		Bot bot = new Bot(grid, dumb);
-		Bot bot2 = new Bot(grid, dumb);
-		RealPlayer p1 = new RealPlayer(grid);
-		Controller controller = new Controller(bot, bot2, grid);
-		System.out.print(grid);
+		
+		System.out.println("insert grid dimension");
+		
+		Scanner in = new Scanner(System.in);
+
+		Controller controller = ControllerManager.createNewInteractiveController(in.nextInt());
+		
+		//in.close();
+		
+		System.out.print(controller.getGrid());
 		do {
 			controller.nextTurn();
-			System.out.print(grid);
 			System.out.println("------");
+			System.out.print(controller.getGrid());
+			
 		} while (controller.finished() == false);
 			
 		controller.getWinner();
