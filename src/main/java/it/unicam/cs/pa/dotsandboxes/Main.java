@@ -17,19 +17,22 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
+		System.out.println("Regole : inserisci la grandezza della griglia definendo solo un numero (es. 6) "
+				+ ",mi restituisce una griglia 6x6, "
+				+ "inserire le coordinate nel seguente modo : (riga,colonna) (riga,colonna)");
+	
+		System.out.println("Insert grid dimension :");
 		
-		System.out.println("insert grid dimension");
-		
-		Scanner in = new Scanner(System.in);
+		Scanner input = new Scanner(System.in);
 
-		Controller controller = ControllerManager.createNewInteractiveController(in.nextInt());
+		Controller controller = ControllerManager.createNewInteractiveController(input.nextInt());
 		
-		//in.close();
+		//input.close();
 		
 		System.out.print(controller.getGrid());
 		do {
 			controller.nextTurn();
-			System.out.println("------");
+			System.out.println("########");
 			System.out.print(controller.getGrid());
 			
 		} while (controller.finished() == false);
