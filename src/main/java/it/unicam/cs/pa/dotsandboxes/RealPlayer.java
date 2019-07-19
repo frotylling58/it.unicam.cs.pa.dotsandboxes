@@ -28,7 +28,7 @@ public class RealPlayer extends AbstractPlayer {
 				Dot dot2 = new Dot(x2, y2);
 				line = new Line(dot1, dot2);
 			}else {
-				System.out.println("Coordinate non valide, inserisci di nuovo");
+				System.out.println("Invalid coordinates, enter again");
 			}
 		} while (!end);
 		return line;

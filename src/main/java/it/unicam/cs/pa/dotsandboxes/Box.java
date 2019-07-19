@@ -23,7 +23,7 @@ public class Box {
 		
 		if(!(lineTop.getDot1().equals(lineLeft.getDot2()) && lineBottom.getDot2().equals(lineLeft.getDot2()) && 
 				lineTop.getDot2().equals(lineRight.getDot1()) && lineBottom.getDot2().equals(lineRight.getDot2()))) {
-			throw new IllegalArgumentException("Le linee non creano un box !");
+			throw new IllegalArgumentException("The lines do not create a box !");
 		}
 		
 			

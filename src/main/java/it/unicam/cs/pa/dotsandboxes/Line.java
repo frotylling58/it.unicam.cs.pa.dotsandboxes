@@ -8,10 +8,10 @@ public class Line {
 	// Costruttore
 	public Line(Dot dot1, Dot dot2) throws IllegalArgumentException {
 		if (dot1.equals(dot2))
-			throw new IllegalArgumentException("Una linea può esistere solo fra due punti diversi");
+			throw new IllegalArgumentException("A line can exist only between two different points !");
 
 		if (Dot.distance(dot1, dot2) != 1.0)
-			throw new IllegalArgumentException("Una linea deve essere formata da due punti adiacenti");
+			throw new IllegalArgumentException("A line must be formed by two adjacent points !");
 		this.dot1 = dot1;
 		this.dot2 = dot2;
 

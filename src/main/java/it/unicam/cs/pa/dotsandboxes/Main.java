@@ -17,9 +17,11 @@ public class Main {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		System.out.println("Regole : inserisci la grandezza della griglia definendo solo un numero (es. 6) "
-				+ ",mi restituisce una griglia 6x6, "
-				+ "inserire le coordinate nel seguente modo : (riga,colonna) (riga,colonna)");
+		System.out.println("WELCOME TO DOTS AND BOXES ! "
+				+ "\n"
+				+ "\nRegole : inserire la grandezza della griglia definendo solo un numero (es. 6), "
+				+ "\nmi restituisce una griglia 6x6, "
+				+ "\npoi inserire le coordinate nel seguente modo : (riga,colonna) (riga,colonna)");
 	
 		System.out.println("Insert grid dimension :");
 		
