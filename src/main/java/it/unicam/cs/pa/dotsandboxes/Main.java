@@ -1,11 +1,8 @@
-
-
 /**
  * 
  */
 package it.unicam.cs.pa.dotsandboxes;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -24,25 +21,7 @@ public class Main {
 				+ "\nmi restituisce una griglia 6x6, "
 				+ "\npoi inserire le coordinate nel seguente modo : (riga,colonna) (riga,colonna)");
 	
-		System.out.println("Insert grid dimension :");
-		
-		Scanner input = new Scanner(System.in);
-		
-	/*	
-		if(input.hasNextInt()) {
-			try {
-			input = new Scanner(System.in);
-			}
-			catch (InputMismatchException e) {
-				throw new InputMismatchException("Voglio un intero !");
-			}
-		}
-		else System.out.println("Voglio un intero !");
-		
-	*/	
-		Controller controller = ControllerManager.createNewInteractiveController(input.nextInt());
-		
-		//input.close();
+		Controller controller = ControllerManager.createNewInteractiveController(scan());
 		
 		System.out.print(controller.getGrid());
 		do {
@@ -54,6 +33,23 @@ public class Main {
 			
 		controller.getWinner();
 		System.out.println("Bye bye by Mattia and Donoval");
+	}
+	
+	
+	@SuppressWarnings("resource")
+	private static int scan()
+	{
+		System.out.println("Insert grid dimension :");
+		
+		Scanner input = new Scanner(System.in);
+		
+		if (!input.hasNextInt())  return scan();
+		
+		int i = input.nextInt();
+		
+		//input.close();
+		return i;	
+		
 	}
 	
 }
