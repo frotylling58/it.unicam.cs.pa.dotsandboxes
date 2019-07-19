@@ -5,6 +5,7 @@
  */
 package it.unicam.cs.pa.dotsandboxes;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -26,7 +27,19 @@ public class Main {
 		System.out.println("Insert grid dimension :");
 		
 		Scanner input = new Scanner(System.in);
-
+		
+	/*	
+		if(input.hasNextInt()) {
+			try {
+			input = new Scanner(System.in);
+			}
+			catch (InputMismatchException e) {
+				throw new InputMismatchException("Voglio un intero !");
+			}
+		}
+		else System.out.println("Voglio un intero !");
+		
+	*/	
 		Controller controller = ControllerManager.createNewInteractiveController(input.nextInt());
 		
 		//input.close();
