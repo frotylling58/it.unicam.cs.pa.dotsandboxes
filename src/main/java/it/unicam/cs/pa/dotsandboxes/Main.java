@@ -1,6 +1,3 @@
-/**
- * 
- */
 package it.unicam.cs.pa.dotsandboxes;
 
 import java.util.Scanner;
@@ -22,6 +19,7 @@ public class Main {
 				+ "\npoi inserire le coordinate nel seguente modo : (riga,colonna) (riga,colonna)");
 	
 		Controller controller = ControllerManager.createNewInteractiveController(scan());
+		
 		
 		System.out.print(controller.getGrid());
 		do {
