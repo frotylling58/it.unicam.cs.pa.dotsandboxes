@@ -37,4 +37,4 @@ please see the document [How to Contribute](https://github.com/frotylling58/it.u
 ## License
 
 
-Licensed under the [UNLICENSED](LICENSE.txt) license.
+Licensed under the [UNLICENSED](https://raw.githubusercontent.com/frotylling58/it.unicam.cs.pa.dotsandboxes/master/LICENSE) license.
