@@ -9,7 +9,7 @@ This repository ("`Code - OSS`") is where we  develop the Dots and Boxes Game pr
 ## Dots And Boxes
 
 <p align="center">
-  <img alt="Dots and Boxes Game in action" src="">
+  <img alt="Dots and Boxes Game in action" src="https://raw.githubusercontent.com/frotylling58/it.unicam.cs.pa.dotsandboxes/master/dots.PNG">
 </p>
 
 
