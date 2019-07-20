@@ -7,62 +7,7 @@ import java.util.List;
 
 public class Grid implements IGrid {
 
-	
 	private Dot[][] grid;
-	private int size;
-	private List<BoxCreatedListener> listeners = new ArrayList<BoxCreatedListener>();
-	private List<Box> boxes = new ArrayList<Box>();
-	private List<Line> lines = new ArrayList<Line>();
-	
-	public Grid(int size) {
-		this.size = size;
-		this.grid = new Dot [size][size];
-		
-	}
-	
-	// listener che controlla se vengono create box
-	public void addBoxCreatedListener(BoxCreatedListener listener) {
-		if (listener == null)
-			return;
-
-		this.listeners.add(listener);
-	}
-
-	private void notifyBoxCreatedListeners() {
-		for (BoxCreatedListener l : listeners)
-			l.onBoxCreated();
-	}
-	
-	public void insertLine(Line line) throws IllegalArgumentException {
-		//if(line.getDot1().getX() >= size || line.getDot1().getY() >= size || line.getDot2().getX() >= size || line.getDot2().getY() >= size)
-		//	throw new IllegalArgumentException("The lines has to be between boundaries");
-		
-		line = line.getNormalForm();
-		
-		if(checkDot(line.getDot1()) || checkDot(line.getDot1()))
-			throw new IllegalArgumentException();
-
-		if(checkPosition(line.getDot1()) || checkPosition(line.getDot2()))	
-			throw new IllegalArgumentException("You cant draw a line over a preexisting line");
-		
-		//grid[line.getDot1().getX()][line.getDot1().getY()] = line.getDot1();
-		//grid[line.getDot2().getX()][line.getDot2().getY()] = line.getDot2();
-		
-		addToGrid(line.getDot1());
-		addToGrid(line.getDot2());
-		
-		for (Box b : numberOfBoxCreated(line)) {
-			boxes.add(b);
-			notifyBoxCreatedListeners();
-		}
-	}
-	
-	
-	
-	//questo sotto è l'ultimo prima dell'ibrido
-	/*
-	
-	private Dot[][] grid = null;
 	private int size;
 	private List<BoxCreatedListener> listeners = new ArrayList<BoxCreatedListener>();
 	private List<Box> boxes = new ArrayList<Box>();
@@ -88,59 +33,96 @@ public class Grid implements IGrid {
 	}
 
 	public void insertLine(Line line) throws IllegalArgumentException {
-		if (line.getDot1().getX() >= size || line.getDot1().getY() >= size || line.getDot2().getX() >= size
-				|| line.getDot2().getY() >= size)
-			throw new IllegalArgumentException("The lines has to be between boundaries");
+		// if(line.getDot1().getX() >= size || line.getDot1().getY() >= size ||
+		// line.getDot2().getX() >= size || line.getDot2().getY() >= size)
+		// throw new IllegalArgumentException("The lines has to be between boundaries");
+
 		line = line.getNormalForm();
 
-		if (grid[line.getDot1().getX()][line.getDot1().getY()] != null
-				&& grid[line.getDot2().getX()][line.getDot2().getY()] != null)
+		if (checkDot(line.getDot1()) || checkDot(line.getDot1()))
+			throw new IllegalArgumentException();
+
+		if (checkPosition(line.getDot1()) || checkPosition(line.getDot2()))
 			throw new IllegalArgumentException("You cant draw a line over a preexisting line");
 
-		grid[line.getDot1().getX()][line.getDot1().getY()] = line.getDot1();
-		grid[line.getDot2().getX()][line.getDot2().getY()] = line.getDot2();
-		lines.add(line);
+		// grid[line.getDot1().getX()][line.getDot1().getY()] = line.getDot1();
+		// grid[line.getDot2().getX()][line.getDot2().getY()] = line.getDot2();
+
+		addToGrid(line.getDot1());
+		addToGrid(line.getDot2());
 
 		for (Box b : numberOfBoxCreated(line)) {
 			boxes.add(b);
 			notifyBoxCreatedListeners();
 		}
-
 	}
-	
-	*/
-	
-	//------------------------
-	
-	private boolean checkDot(Dot dot)
-	{
+
+	// questo sotto è l'ultimo prima dell'ibrido
+	/*
+	 * 
+	 * private Dot[][] grid = null; private int size; private
+	 * List<BoxCreatedListener> listeners = new ArrayList<BoxCreatedListener>();
+	 * private List<Box> boxes = new ArrayList<Box>(); private List<Line> lines =
+	 * new ArrayList<Line>();
+	 * 
+	 * public Grid(int size) { this.size = size; this.grid = new Dot[size][size];
+	 * 
+	 * }
+	 * 
+	 * // listener che controlla se vengono create box public void
+	 * addBoxCreatedListener(BoxCreatedListener listener) { if (listener == null)
+	 * return;
+	 * 
+	 * this.listeners.add(listener); }
+	 * 
+	 * private void notifyBoxCreatedListeners() { for (BoxCreatedListener l :
+	 * listeners) l.onBoxCreated(); }
+	 * 
+	 * public void insertLine(Line line) throws IllegalArgumentException { if
+	 * (line.getDot1().getX() >= size || line.getDot1().getY() >= size ||
+	 * line.getDot2().getX() >= size || line.getDot2().getY() >= size) throw new
+	 * IllegalArgumentException("The lines has to be between boundaries"); line =
+	 * line.getNormalForm();
+	 * 
+	 * if (grid[line.getDot1().getX()][line.getDot1().getY()] != null &&
+	 * grid[line.getDot2().getX()][line.getDot2().getY()] != null) throw new
+	 * IllegalArgumentException("You cant draw a line over a preexisting line");
+	 * 
+	 * grid[line.getDot1().getX()][line.getDot1().getY()] = line.getDot1();
+	 * grid[line.getDot2().getX()][line.getDot2().getY()] = line.getDot2();
+	 * lines.add(line);
+	 * 
+	 * for (Box b : numberOfBoxCreated(line)) { boxes.add(b);
+	 * notifyBoxCreatedListeners(); }
+	 * 
+	 * }
+	 * 
+	 */
+
+	// ------------------------
+
+	private boolean checkDot(Dot dot) {
 		return dot.getX() >= size || dot.getY() >= size;
 	}
-	
-	private boolean checkPosition(Dot dot)
-	{
+
+	private boolean checkPosition(Dot dot) {
 		return grid[dot.getX()][dot.getY()] != null;
 	}
-	
-	private void addToGrid(Dot dot)
-	{
+
+	private void addToGrid(Dot dot) {
 		grid[dot.getX()][dot.getY()] = dot;
 	}
 
-	
-	public boolean isFinished()
-	{
-		for(int row = 0; row<grid.length; row++)
-			for(int col = 0; col<grid[row].length; col++) 
-				if(grid[row][col] == null)
+	public boolean isFinished() {
+		for (int row = 0; row < grid.length; row++)
+			for (int col = 0; col < grid[row].length; col++)
+				if (grid[row][col] == null)
 					return false;
-				
+
 		return true;
 	}
 
-
-	
-	//--------------
+	// --------------
 	public Dot[][] getGrid() {
 		return grid;
 	}
@@ -170,12 +152,11 @@ public class Grid implements IGrid {
 		return adjacentLines(line, d1_arr, d2_arr, d1, d2, dX, dY);
 	}
 
-	private ArrayList<Box> adjacentLines(Line line, ArrayList<Integer> d1_arr,ArrayList<Integer> d2_arr, Dot d1,
-			Dot d2, int dX, int dY) 
-	{
+	private ArrayList<Box> adjacentLines(Line line, ArrayList<Integer> d1_arr, ArrayList<Integer> d2_arr, Dot d1,
+			Dot d2, int dX, int dY) {
 
 		ArrayList<Box> result = new ArrayList<Box>();
-		
+
 		// stream per ottenere le eventuali linee adiacenti
 
 		if (!d1_arr.contains(size) && !d2_arr.contains(size)) {

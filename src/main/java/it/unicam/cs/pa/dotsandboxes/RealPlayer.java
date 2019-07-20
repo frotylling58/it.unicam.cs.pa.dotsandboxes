@@ -6,6 +6,7 @@ import java.util.regex.*;
 public class RealPlayer extends AbstractPlayer {
 
 	private Scanner s = new Scanner(System.in);
+
 	public RealPlayer(IGrid grid) {
 		super(grid);
 	}
@@ -27,7 +28,7 @@ public class RealPlayer extends AbstractPlayer {
 				Dot dot1 = new Dot(x1, y1);
 				Dot dot2 = new Dot(x2, y2);
 				line = new Line(dot1, dot2);
-			}else {
+			} else {
 				System.out.println("Invalid coordinates, enter again");
 			}
 		} while (!end);

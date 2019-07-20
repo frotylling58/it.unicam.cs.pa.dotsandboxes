@@ -6,13 +6,9 @@ import org.junit.Test;
 
 public class testProva {
 
-	
 	@Test()
-	public void prova()
-	{
-		
+	public void prova() {
+
 		assertEquals(true, new Grid(12));
 	}
 }
-
-
