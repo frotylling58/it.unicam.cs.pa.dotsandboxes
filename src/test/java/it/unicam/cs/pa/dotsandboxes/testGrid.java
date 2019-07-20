@@ -6,11 +6,10 @@ import org.junit.Test;
 
 public class testGrid {
 
-	
 	@Test()
 	public void testGrid() {
-		
-		Grid grid = new Grid(3);	
+
+		Grid grid = new Grid(3);
 		assertEquals(3, grid.getSize());
 	}
 }

@@ -82,9 +82,8 @@ public class Grid {
 		return adjacentLines(line, d1_arr, d2_arr, d1, d2, dX, dY);
 	}
 
-	private ArrayList<Box> adjacentLines(Line line, ArrayList<Integer> d1_arr, 		ArrayList<Integer> d2_arr, Dot d1,
-			Dot d2, int dX, int dY) 
-	{
+	private ArrayList<Box> adjacentLines(Line line, ArrayList<Integer> d1_arr, ArrayList<Integer> d2_arr, Dot d1,
+			Dot d2, int dX, int dY) {
 
 		ArrayList<Box> result = new ArrayList<Box>();
 		// stream per ottenere le eventuali linee adiacenti

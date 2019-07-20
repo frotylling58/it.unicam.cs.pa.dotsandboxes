@@ -26,20 +26,20 @@ public class Line {
 	}
 
 	public Line getNormalForm() {
-		if(dot1.getX() < dot2.getX() || dot1.getY() < dot2.getY())
-			return new Line(dot2,dot1);
+		if (dot1.getX() < dot2.getX() || dot1.getY() < dot2.getY())
+			return new Line(dot2, dot1);
 		return this;
 	}
-	
+
 	public boolean isVertical() {
 		Line line = this.getNormalForm();
-		return line.getDot1().getY()<line.getDot2().getY();
+		return line.getDot1().getY() < line.getDot2().getY();
 	}
+
 	public boolean isHorizontal() {
 		return !isVertical();
 	}
 
-	
 	@Override
 	public String toString() {
 		return String.format("[%s,%s]", dot1.toString(), dot2.toString());
@@ -57,7 +57,5 @@ public class Line {
 				|| this.dot1.equals(line.dot2) && this.dot2.equals(line.dot1);
 
 	}
-
-
 
 }
