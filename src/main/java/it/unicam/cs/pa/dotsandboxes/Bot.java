@@ -3,7 +3,7 @@ package it.unicam.cs.pa.dotsandboxes;
 public class Bot extends AbstractPlayer {
 	private Strategy strategy = null;
 	
-	public Bot(Grid grid, Strategy strategy) {
+	public Bot(IGrid grid, Strategy strategy) {
 		super(grid);
 		this.strategy = strategy; 
 	}

@@ -42,6 +42,12 @@ public class Dot {
 		return this.x == dot.x && this.y == dot.y;
 		
 	}
+	public int hashCode()
+	{
+		return 0;
+		
+	}
+	
 	public static double distance(Dot d1, Dot d2)
 	{
 		return Math.sqrt(Math.pow(d1.getX()-d2.getX(),2)+ Math.pow(d1.getY()-d2.getY(),2));

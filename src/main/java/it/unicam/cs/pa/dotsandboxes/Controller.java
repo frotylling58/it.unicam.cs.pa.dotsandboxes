@@ -2,11 +2,11 @@ package it.unicam.cs.pa.dotsandboxes;
 
 public class Controller {
 	
-	private Grid grid;
+	private IGrid grid;
 	private PlayerWithPoints player1, player2;
 	private PlayerWithPoints currentTurn;
 	
-	public Controller(Player player1, Player player2, Grid grid) {
+	public Controller(Player player1, Player player2, IGrid grid) {
 		this.grid = grid;
 		this.player1 = new PlayerWithPoints(player1);
 		this.player2 = new PlayerWithPoints(player2);
@@ -21,7 +21,7 @@ public class Controller {
 		
 	}
 
-	public Grid getGrid() {
+	public IGrid getGrid() {
 		return grid;
 	}
 

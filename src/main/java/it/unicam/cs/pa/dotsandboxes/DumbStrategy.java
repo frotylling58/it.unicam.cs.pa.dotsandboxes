@@ -4,7 +4,7 @@ import java.util.Random;
 public class DumbStrategy implements Strategy {
 
 	@Override
-	public Line suggestLine(Grid grid) {
+	public Line suggestLine(IGrid grid) {
 		Random r = new Random();
 		int x = r.nextInt(grid.getSize());
 		int y = r.nextInt(grid.getSize());

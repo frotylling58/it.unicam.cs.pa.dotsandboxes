@@ -7,4 +7,8 @@ public interface IGrid {
 	public boolean isFinished();
 	
 	public int getSize();
+	
+	public void addBoxCreatedListener(BoxCreatedListener listener);
+	
+	public Dot[][] getGrid();
 }

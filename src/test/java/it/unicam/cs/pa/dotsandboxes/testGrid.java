@@ -8,9 +8,15 @@ public class testGrid {
 
 	
 	@Test()
-	public void testGrid() {
+	public void testCreateGrid() {
 		
 		Grid grid = new Grid(3);	
 		assertEquals(3, grid.getSize());
+	}
+	
+	
+	public void testIsFinished()
+	{
+		assertFalse(new Grid(4).isFinished());
 	}
 }

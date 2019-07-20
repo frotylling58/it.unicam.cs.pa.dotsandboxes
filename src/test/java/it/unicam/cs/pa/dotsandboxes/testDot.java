@@ -6,11 +6,12 @@ import org.junit.Test;
 
 public class testDot {
 	
-	@Test()
-	public void testDot() {
+	@Test(expected=IllegalArgumentException.class)
+	public void IllegalCreateNewDot() {
 		
-	//	Bot bot = new  Bot(new Grid(3), new DumbStrategy());
-	//	assertEquals(3, bot.drawLine.toString(dot1, dot2));
+		new Dot(-1,6);
+		
+		
 	}
 
 }
