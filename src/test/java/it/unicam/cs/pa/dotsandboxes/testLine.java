@@ -1,16 +1,25 @@
 package it.unicam.cs.pa.dotsandboxes;
 
-import static org.junit.Assert.*;
 
 import org.junit.Test;
 
 public class testLine {
-
-	@Test()
-	public void testLine() {
-
-		// Bot bot = new Bot(new Grid(3), new DumbStrategy());
-		// assertEquals(3, bot.drawLine.toString(dot1, dot2));
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void IllegalLineCreation() {
+		
+	Dot d1 = new Dot(1,1);
+	
+		new Line(d1, d1);
+	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void IllegalLineCheckDistance() {
+		
+	Dot d1 = new Dot(1,1);
+	Dot d2 = new Dot(1,2);
+		new Line(d1, d2);
+		
 	}
 
 }
