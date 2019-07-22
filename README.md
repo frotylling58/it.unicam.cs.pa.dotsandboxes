@@ -6,13 +6,12 @@ Dots and Boxes Game in Java - Project
 
 This repository ("`Code - OSS`") is where we  develop the Dots and Boxes Game. 
 We work on code and issues here, to let the project works well. 
-The source code here is available for free and unencumbered software released into the public domain.(https://github.com/frotylling58/it.unicam.cs.pa.dotsandboxes/blob/master/LICENSE).
+The source code here is available for free and unencumbered software is released as public domain.(https://github.com/frotylling58/it.unicam.cs.pa.dotsandboxes/blob/master/LICENSE).
 
 ## Dots And Boxes
 
 <p align="center">
-  <img alt="Dots and Boxes Game in action" src="https://raw.githubusercontent.com/frotylling58/it.unicam.cs.pa.dotsandboxes/master/dotsAction.PNG">
-  
+  <img alt="Dots and Boxes Game in action" src="https://raw.githubusercontent.com/frotylling58/it.unicam.cs.pa.dotsandboxes/master/dotsAction.PNG"> 
 </p>
 
 
