@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="it.unicam.cs.pa.dotsandboxes.structure.testDot" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-07-22T16:43:10" hostname="WINDOWSPHONE-02L84G" time="0.002">
+  <properties/>
+  <testcase name="IllegalCreateNewDot" classname="it.unicam.cs.pa.dotsandboxes.structure.testDot" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
