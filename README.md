@@ -12,6 +12,7 @@ The source code here is available for free and unencumbered software released in
 
 <p align="center">
   <img alt="Dots and Boxes Game in action" src="https://raw.githubusercontent.com/frotylling58/it.unicam.cs.pa.dotsandboxes/master/dots.PNG">
+  
 </p>
 
 
