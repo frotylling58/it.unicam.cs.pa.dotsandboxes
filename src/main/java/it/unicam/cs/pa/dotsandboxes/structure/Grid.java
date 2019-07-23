@@ -142,7 +142,7 @@ public class Grid implements IGrid {
 	}
 
 	private Line getLine(Dot dot, int dX, int dY) {
-		return lines.stream().filter((Line l) -> {
+		return lines.stream().parallel().filter((Line l) -> {
 			Dot l_d1 = l.getDot1();
 			Dot l_d2 = l.getDot2();
 			return l_d1.equals(dot) && l_d2.equals(new Dot(dot.getX() + dX, dot.getY() + dY));
