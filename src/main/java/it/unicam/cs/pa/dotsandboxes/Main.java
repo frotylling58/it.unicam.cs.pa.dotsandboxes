@@ -1,5 +1,8 @@
 package it.unicam.cs.pa.dotsandboxes;
-
+/**
+ * @param
+ * @author Donoval Candolfi - Mattia Incoronato
+ */
 import java.util.Scanner;
 
 import it.unicam.cs.pa.dotsandboxes.manager.Controller;
@@ -7,7 +10,7 @@ import it.unicam.cs.pa.dotsandboxes.manager.ControllerManager;
 
 /**
  * @param
- *
+ * @author Donoval Candolfi - Mattia Incoronato
  */
 public class Main {
 	static Controller controller;
