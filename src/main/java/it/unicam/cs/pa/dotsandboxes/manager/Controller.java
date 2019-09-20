@@ -1,5 +1,8 @@
 package it.unicam.cs.pa.dotsandboxes.manager;
-
+/**
+* @author Donoval Candolfi - Mattia Incoronato
+*
+*/
 import it.unicam.cs.pa.dotsandboxes.player.Player;
 import it.unicam.cs.pa.dotsandboxes.player.PlayerWithPoints;
 import it.unicam.cs.pa.dotsandboxes.structure.BoxCreatedListener;
