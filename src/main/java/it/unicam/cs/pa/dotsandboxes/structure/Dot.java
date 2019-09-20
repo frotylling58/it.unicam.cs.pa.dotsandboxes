@@ -1,9 +1,9 @@
 package it.unicam.cs.pa.dotsandboxes.structure;
 
 /**
- * @param la classe dot ha la responsabilit� di definire i punti che verranno
+ * @param la classe dot ha la responsabilità di definire i punti che verranno
  *           utlizzati sulla griglia
- *
+ * @author Donoval Candolfi - Mattia Incoronato
  */
 public class Dot {
 
@@ -33,7 +33,7 @@ public class Dot {
 
 	}
 
-	// Controlla se l'elemento è un istanza di Dot
+	// Controlla se l'elemento Ã¨ un istanza di Dot
 	@Override
 	public boolean equals(Object obj) {
 		if (!(obj instanceof Dot)) {
