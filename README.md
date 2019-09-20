@@ -6,7 +6,7 @@ Dots and Boxes Game in Java Donoval - Project
 
 This repository ("`Code - OSS`") is where we  develop the Dots and Boxes Game. 
 We work on code and issues here, to let the project works well. 
-The source code here is available for free and unencumbered software is released as public domain.(https://github.com/frotylling58/it.unicam.cs.pa.dotsandboxes/blob/master/LICENSE/donoval).
+The source code here is available for free and unencumbered software is released as public domain.(https://github.com/frotylling58/it.unicam.cs.pa.dotsandboxes/blob/master/LICENSE).
 
 ## Dots And Boxes
 
