@@ -1,5 +1,8 @@
 package it.unicam.cs.pa.dotsandboxes.structure;
-
+/**
+* @author Donoval Candolfi - Mattia Incoronato
+*
+*/
 import static org.junit.Assert.*;
 
 import org.junit.Test;
