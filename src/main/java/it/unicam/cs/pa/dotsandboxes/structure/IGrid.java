@@ -3,6 +3,7 @@ package it.unicam.cs.pa.dotsandboxes.structure;
 /**
  * @param si occupa di definire i metodi per cui deve essere creata la Grid ,
  *           l'interfaccia passa i parametri alla classe Grid
+ * @author Donoval Candolfi - Mattia Incoronato
  */
 public interface IGrid {
 
