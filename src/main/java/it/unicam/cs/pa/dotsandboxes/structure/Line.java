@@ -2,7 +2,7 @@ package it.unicam.cs.pa.dotsandboxes.structure;
 
 /**
  * @param
- *
+ * @author Donoval Candolfi - Mattia Incoronato
  */
 public class Line {
 
@@ -50,7 +50,7 @@ public class Line {
 
 	}
 
-	// Controlla se l'elemento è una istanza di Line
+	// Controlla se l'elemento Ã¨ una istanza di Line
 	@Override
 	public boolean equals(Object obj) {
 		if (!(obj instanceof Line)) {
