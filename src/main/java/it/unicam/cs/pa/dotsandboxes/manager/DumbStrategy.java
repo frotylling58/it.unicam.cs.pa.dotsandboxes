@@ -1,5 +1,8 @@
 package it.unicam.cs.pa.dotsandboxes.manager;
-
+/**
+* @author Donoval Candolfi - Mattia Incoronato
+*
+*/
 import java.util.Random;
 
 import it.unicam.cs.pa.dotsandboxes.structure.Dot;
@@ -35,7 +38,7 @@ public class DumbStrategy implements Strategy {
 		if (y == size) return new Dot[] { new Dot(x + 1, y), new Dot(x - 1, y), new Dot(x, y - 1) };
 		if (x == 0) return new Dot[] { new Dot(x + 1, y), new Dot(x, y + 1), new Dot(x, y - 1) };
 		if (x == size) return new Dot[] { new Dot(x - 1, y), new Dot(x, y + 1), new Dot(x, y - 1) };
-		// altrimenti il punto è all'interno della griglia (no lati, no angoli)
+		// altrimenti il punto Ã¨ all'interno della griglia (no lati, no angoli)
 		return new Dot[] { new Dot(x, y - 1), new Dot(x, y + 1), new Dot(x + 1, y), new Dot(x - 1, y) };
 	}
 
