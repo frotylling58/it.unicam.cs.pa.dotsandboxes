@@ -1,5 +1,8 @@
 package it.unicam.cs.pa.dotsandboxes.structure;
-
+/**
+ * @param
+ * @author Donoval Candolfi - Mattia Incoronato
+ */
 import java.util.ArrayList;
 import java.util.List;
 
