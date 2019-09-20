@@ -2,7 +2,7 @@ package it.unicam.cs.pa.dotsandboxes.player;
 
 /**
  * @param Oggetto per tenere traccia dei punti dei giocatori
- *
+ * @author Donoval Candolfi - Mattia Incoronato
  */
 public class PlayerWithPoints {
 
