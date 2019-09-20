@@ -1,4 +1,8 @@
 package it.unicam.cs.pa.dotsandboxes.player;
+/**
+ *
+ * @author Donoval Candolfi - Mattia Incoronato
+ */
 
 import it.unicam.cs.pa.dotsandboxes.structure.Dot;
 import it.unicam.cs.pa.dotsandboxes.structure.IGrid;
@@ -9,7 +13,7 @@ import java.util.regex.*;
 
 /**
  * @param
- *
+ * @author Donoval Candolfi - Mattia Incoronato
  */
 public class RealPlayer extends AbstractPlayer {
 
